@@ -1,0 +1,98 @@
+body{
+	margin-top: 20px;
+	background-color: #f0f0f0;
+}
+.btn{
+	font-family: cursive;
+}
+.navbar-default{
+	background-color: #2C3E50;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	
+}
+#main-jumbo{
+	margin-top: 10px;
+	background-position: bottom;
+	background-image: url(book4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	color: #ffffff;
+}
+#book-panel{
+	background: #fafafa;
+	margin-bottom: 30px;
+	border-color: #2C3E50;
+}
+
+#panel-heading{
+	background: #2C3E50;
+	color: #cecccc;
+}
+.panel-heading:hover {
+  background-color: #469b3f !important;
+}
+#panel-heading a{
+	color: #ffffff;
+}
+
+#panel-footer{
+	background: #c4c9bf;
+	
+}
+#jumbo-book{
+	
+	background-position: bottom;
+	background-image: url(wood.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	margin-top: 10px;
+	
+}
+
+
+#panel-header-book{
+	background: #2C3E50;
+	border-color: #2C3E50;
+	color: #f0f0f0;
+	font-weight: 600;
+}
+
+#books, #reviews, #jumbo-reviews{
+	background: #cecccc;
+}
+
+#sidebar{
+	
+	background-color: #2C3E50;
+	color: #f0f0f0;
+	padding: 45px;
+}
+#sidebar h1{
+	font-size: 37px;
+	font-weight: bolder;
+	font-family:  'Century Gothic';
+}
+
+@media(min-width: 100px){
+	#sidebar{
+	position: static;
+	text-align: center;
+	
+}
+}
+@media(min-width: 828px){
+
+	#sidebar{
+	position: fixed;
+	max-width: 350px;
+	text-align: left;
+	
+}
+}
+
+
+
+
