@@ -1,8 +1,18 @@
-<div class="navbar navbar-inverse" role="navigation">
+<script src="https://use.fontawesome.com/db4d801074.js"></script>
+
+<div class="navbar navbar-inverse" id="foot">
 	<div class="container">
 		<div class="navbar-text pull-left">
 			<p>BookShare</p>
 			<p>Walchand College Of Engineering, Sangli</p>
+		</div>
+		<div class="navbar-text pull-right">
+			Developed by Viraj Chavan
+			<br><br>
+			<a href="https://facebook.com/virajvchavan" target="_blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+			&nbsp;
+			<a href="https://github.com/virajvchavan" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>			&nbsp;
+			<a href="https://www.linkedin.com/in/viraj-chavan-4b2565117" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
 		</div>
 	</div>
 </div>

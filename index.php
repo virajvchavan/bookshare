@@ -2,7 +2,7 @@
 include_once "conn.inc.php";
 
 //for recommending the book
-include_once "like.php";
+//include_once "like.php";
 
 //setcookie("review", "", time() - 3600);
 //setcookie("book_id", "", time() - 3600);
@@ -11,6 +11,43 @@ include_once "like.php";
 <html>
 	<head>
 		<title>Bookshare</title>
+		
+		<script>
+		
+			function recommend(book_id, num_likes)
+			{
+				
+				xmlhttp.open("GET","like.php?like=" + book_id,true);
+				xmlhttp.send();
+				
+				
+				
+				document.getElementById("change_like"+book_id).innerHTML = "<button onclick='not_recommend($book_id, $id_of_like, $num_likes)' class='btn btn-info btn-sm active'>Reccomended <div class='badge'>"+(num_likes + 1)+ "</div></button>";
+				xmlhttp=new XMLHttpRequest();
+
+			}
+			function not_recommend(book_id, id_of_like, num_likes)
+			{
+				
+				if (window.XMLHttpRequest) 
+				{
+					// code for IE7+, Firefox, Chrome, Opera, Safari
+					xmlhttp=new XMLHttpRequest();
+				}
+				else 
+				{  // code for IE6, IE5
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				xmlhttp.open("GET","like.php?dislike=" +book_id+ "&like_id=" + id_of_like,true);
+				
+				xmlhttp.send();
+				
+				document.getElementById("change_like"+book_id).innerHTML = "<button onclick='recommend($book_id, $num_likes)' class='btn btn-info btn-sm'>Reccomend <div class='badge'>"+(num_likes - 1)+ "</div></button>";
+				
+			}
+		
+		</script>
 	</head>
 	<body>
 		<?php
@@ -91,7 +128,7 @@ include_once "like.php";
 						echo "</div><div id='$count_books'>";
 						
 					
-					//check if this book is liked bt the logged in user to choose what to print: reccomend or recomended
+					//check if this book is liked by the logged in user to choose what to print: recommend or recommended
 					$liked_this = false;
 					$id_of_like = "";
 					$query_is_liked = "SELECT id FROM recommendations WHERE user_id='$user_id' AND book_id='$book_id'";
@@ -121,26 +158,28 @@ include_once "like.php";
 					echo "</div>";
 					//echo "<br>Recommend by: <b>$num_likes</b> Readers.";
 					echo "<div class='panel-footer' id='panel-footer'>";
+					echo "<span id='change_like$book_id'>";
 					if($liked_this)
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/index.php?dislike=$book_id&like_id=$id_of_like#$bookmark' class='btn btn-info btn-sm active'>Reccomended ";
+							echo "<button onclick='not_recommend($book_id, $id_of_like, $num_likes)' class='btn btn-info btn-sm active'>Reccomended";//we need the id of like to delete the recomeendation from table
 						else
-							echo "<a href='#login' data-toggle='modal' class='btn btn-info btn-sm active'>Recommended ";
+							echo "<button href='#login' data-toggle='modal' class='btn btn-info btn-sm active'>Reccomended";
 					}
 					else
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/index.php?like=$book_id#$bookmark'' class='btn btn-info btn-sm'>Reccomend ";
+							echo "<button onclick='recommend($book_id, $num_likes)' class='btn btn-info btn-sm'>Reccomend";
 						else
-							echo "<a href='#login' data-toggle='modal' class='btn btn-info btn-sm'>Recommend ";
+							echo "<button href='#login' data-toggle='modal' class='btn btn-info btn-sm'>Reccomend ";
 					}
-					echo "<div class='badge'> $num_likes</div></a>";
+					echo " <span class='badge'>$num_likes</span></button>";
+					echo "</span>";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reviews  &nbsp;<span class='badge'>$num_reviews</span>";
 					
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reviews  &nbsp;<div class='badge'>$num_reviews</div>";
+					
 					echo "</div>";
 					echo "</div>";
-					
 					echo "</div>";
 
 				}
@@ -156,6 +195,24 @@ include_once "like.php";
 	</div>
 	</div>
 	
+	
+		<!-- Start of StatCounter Code for Default Guide -->
+	<script type="text/javascript">
+	var sc_project=11084230; 
+	var sc_invisible=0; 
+	var sc_security="651230c1"; 
+	var scJsHost = (("https:" == document.location.protocol) ?
+	"https://secure." : "http://www.");
+	document.write("<sc"+"ript type='text/javascript' src='" +
+	scJsHost+
+	"statcounter.com/counter/counter.js'></"+"script>");
+	</script>
+	<noscript><div class="statcounter"><a title="website
+	statistics" href="http://statcounter.com/free-web-stats/"
+	target="_blank"><img class="statcounter"
+	src="//c.statcounter.com/11084230/0/651230c1/0/"
+	alt="website statistics"></a></div></noscript>
+	<!-- End of StatCounter Code for Default Guide -->
 	
 	
 	</body>

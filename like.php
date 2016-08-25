@@ -27,6 +27,7 @@ if(isset($_GET['like']) & !empty($_GET['like']))
 				   if(mysqli_query($conn, $query_like_book))
 				   {
 				    	   
+						
 				   }
 			   }
 		   }

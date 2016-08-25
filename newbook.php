@@ -51,6 +51,7 @@ if(!$book_added)
 {
 ?>
 	<h2>Enter the details of the book:</h2><br><br>
+	<div id="small_form">
 		<form action="newbook.php" method="post" role="form">
 			<div class="form-group">
     			<label class="control-label col-sm-2" for="name">Name:</label>
@@ -81,6 +82,7 @@ if(!$book_added)
 				</div>
 			</div>
 			</form>
+			</div>
 	
 <?php
 }

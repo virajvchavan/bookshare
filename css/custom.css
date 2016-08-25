@@ -27,11 +27,11 @@ body{
 }
 
 #panel-heading{
-	background: #2C3E50;
+	background: #37474f;
 	color: #cecccc;
 }
 .panel-heading:hover {
-  background-color: #469b3f !important;
+  background-color: #263238 !important;
 }
 #panel-heading a{
 	color: #ffffff;
@@ -54,7 +54,7 @@ body{
 
 
 #panel-header-book{
-	background: #2C3E50;
+	background: #37474f;
 	border-color: #2C3E50;
 	color: #f0f0f0;
 	font-weight: 600;
@@ -82,6 +82,11 @@ body{
 	text-align: center;
 	
 }
+#small_form{
+		margin-left:10px;
+		margin-right:20px;
+		
+	}
 }
 @media(min-width: 828px){
 
@@ -91,6 +96,15 @@ body{
 	text-align: left;
 	
 }
+	#small_form{
+		margin-left:120px;
+		margin-right:200px;
+		
+	}
+}
+
+#foot{
+	margin: 0px;
 }
 
 

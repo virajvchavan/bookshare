@@ -1,14 +1,6 @@
 <?php
 include_once "conn.inc.php";
 ?>
-<?php
-
-
-
-?>
-
-
-
 <!doctype html>
 <html lang="en">
 	<head>

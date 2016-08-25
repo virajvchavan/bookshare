@@ -1,4 +1,3 @@
-
 <?php
 include "conn.inc.php";
 include "like.php";
@@ -154,6 +153,7 @@ if($run_reviews = mysqli_query($conn, $query_print_reviews))
 			
 			echo "</div>";
 		}
+		
 	}
 
 }
@@ -165,34 +165,9 @@ else
 
 
 
-//adding a review to the database
-$review = "";
-if(isset($_POST['review']) && !empty($_POST['review']))
-{
-	$review = $_POST['review'];
-	$review = nl2br(filter_var($review,FILTER_SANITIZE_STRING));
-	
-	if(!isLoggedIn())
-	{
-		echo "<script>alert('You need to Login to add a review.');</script>";	
-		
-	}
-	else
-	{
-		$query_review = "INSERT INTO reviews(review, user_id, book_id) VALUES('$review','$user_id','$book_id')";
-		if(mysqli_query($conn, $query_review))
-		{
-			echo "Review added.";
-			setcookie("review", "", time() - 3600);
-			setcookie("book_id", "", time() - 3600);
-			header("refresh:0,url=book.php?id=$book_id");
-		}
-		else
-			echo "error adding review.";
-	}
-}
 
 
+//action='book.php?id=$book_id'
 //box for adding the review
 if(isset($_COOKIE['review']) && isset($_COOKIE['book_id']) && $book_id == $_COOKIE['book_id'])
 {
@@ -200,9 +175,9 @@ if(isset($_COOKIE['review']) && isset($_COOKIE['book_id']) && $book_id == $_COOK
 }
 echo "<div class='text-right'>";
 if(isLoggedIn())
-	echo "<hr><br><form action='book.php?id=$book_id' method='post'><textarea rows='7' name='review' class='form-control' required placeholder='What are your thoughts on $book_name?'>$review</textarea><br><br><input class='btn btn-primary' type='submit' value='Add Review'></form>";
+	echo "<hr><br><form method='post' action='add_comment.php?id=$book_id&uid=$user_id'> <textarea id='the_comment' rows='7' name='review' class='form-control' required placeholder='What are your thoughts on $book_name?'></textarea><br><br><button class='btn btn-primary' type='submit' onclick='new_comment($book_id, $user_id)' >Add review</button></form>";
 else
-	echo "<hr><br><textarea placeholder='What are your thoughts on $book_name?' rows='7'  name='review' class='form-control'>$review</textarea><br><br><a href='#login' data-toggle='modal' class='btn btn-primary'>Add review</a>";
+	echo "<hr><br><textarea placeholder='What are your thoughts on $book_name?' rows='7'  name='review' class='form-control'></textarea><br><br><a href='#login' data-toggle='modal' class='btn btn-primary'>Add review</a>";
 echo "</div>";
 
 ?>
