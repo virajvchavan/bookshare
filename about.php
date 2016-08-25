@@ -2,6 +2,30 @@
 include "conn.inc.php";
 include "header.php";
 ?>
+
+<?php
+if(isset($_POST['feedback']) && !empty($_POST['feedback']))
+{
+	$feedback = $_POST['feedback'];
+	$feedback = nl2br(filter_var($feedback,FILTER_SANITIZE_STRING));
+	
+	$name = $_POST['name'];
+	$name = filter_var($name,FILTER_SANITIZE_STRING);
+	
+	$email = $_POST['email'];
+	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	
+	$query_feedback = "INSERT INTO feedback(name, email, feedback) VALUES('$name','$email','$feedback')";
+		
+	if(mysqli_query($conn, $query_feedback))
+	{
+		echo "<script>alert('Thank you for your feedback!')</script>";
+		header("refresh:0,url=index.php");
+	}
+}
+
+
+?>
 <style>
 	form{
 		font-size: 17px;
@@ -15,8 +39,8 @@ include "header.php";
 	
 </style>
 <div class="container">
-<h2>What do you think about WCEBookshare?</h2><br><br>
-		<form action="feedback.php" method="post" role="form">
+<h2>What do you think about Wce Bookshare?</h2><br><br>
+		<form action="about.php" method="post" role="form">
 		<div id="small_form">
 			<div class="form-group">
     			<label class="control-label col-sm-2" for="name">Name:</label>

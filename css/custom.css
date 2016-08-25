@@ -2,9 +2,6 @@ body{
 	margin-top: 20px;
 	background-color: #f0f0f0;
 }
-.btn{
-
-}
 .navbar-default{
 	background-color: #2C3E50;
 	border-color: #FFFFFF;
@@ -14,11 +11,14 @@ body{
 #main-jumbo{
 	margin-top: 10px;
 	background-position: bottom;
-	background-image: url(book4.jpg);
+	background-image: url(http://qooton.com/wp-content/uploads/2016/01/AdobeStock_88282716.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	
-	color: #ffffff;
+	color: #000100;
+}
+.blur{
+	background: rgba(255,255,255,0.6);	
+	padding:3px;
 }
 #book-panel{
 	background: #fafafa;
@@ -44,7 +44,7 @@ body{
 #jumbo-book{
 	
 	background-position: bottom;
-	background-image: url(wood.jpg);
+	background-image: url(http://www.designshock.com/wp-content/uploads/2015/02/prisma.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;

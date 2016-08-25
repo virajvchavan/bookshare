@@ -16,7 +16,7 @@ include_once "conn.inc.php";
 				font-size: 15px;
 			}
 		</style>
-		<title>Bookshare</title>
+		<title>Wce Bookshare</title>
 		
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/custom.css" rel="stylesheet">

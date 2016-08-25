@@ -55,13 +55,16 @@ include_once "conn.inc.php";
 	
 		?>
 	<div class="container">
-	<div class="jumbotron text-right" id="main-jumbo">
+	<div class="jumbotron" id="main-jumbo">
 		<div id="jumbo-text">
-			<h1><b>BookShare</b></h1>
-			<p><i>For the love of books</i>
-			<br><br>Be a part of the network of booksworms of WCE</p><br>
-				<?php if(!isLoggedIn()) echo "<a href='#register' data-toggle='modal' class='btn btn-success'>Register Now</a>"; ?>
-				<a href = "<?php if(isLoggedIn()) echo 'newbook.php'; else echo '#login';?>" class="btn btn-primary" <?php if(!isLoggedIn()) echo "data-toggle='modal'"; ?>>Share a book now!</a>
+			<h1><b class="blur">BookShare</b></h1>
+			<p ><i class="blur">For the love of books</i></p>
+			<br>
+			<a href="#intro" data-toggle="modal" class="blur">See how this website works -></a>
+			<br><br>
+			
+			<?php if(!isLoggedIn()) echo "<a href='#register' data-toggle='modal' class='btn btn-success'>Register Now</a>"; ?>
+			<a href = "<?php if(isLoggedIn()) echo 'newbook.php'; else echo '#login';?>" class="btn btn-primary" <?php if(!isLoggedIn()) echo "data-toggle='modal'"; ?>>Share a book now!</a>
 		</div>
 	</div>
 		<br>
@@ -195,6 +198,43 @@ include_once "conn.inc.php";
 	</div>
 	</div>
 	
+	<style>
+	#faq{
+		font-size: 18px;
+	}
+	</style>
+	<!-- modal to show the intro of websire -->
+	<div class="modal fade" id="intro" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4>WCE BookShare</h4>
+					</div>
+					<div class="modal-body">
+						<p id="faq">
+							Ever wanted to read some book, but never bought it? Or miss your old library where you used to borrow books
+							from?<br><br>
+							BookShare is here to help you out.<br><br>
+							The idea is that the users from WCE upload the info of the books that they have.
+							Chances are, someone from our college might have a book you'll love and you'll get to know it from this website!
+							So you can contact that person to get the book.
+							And other people will contact you for the books that you've shared on this website.<br>
+							<br>
+							The more books you will share, more people will get motivated to share their books, and you'll get more options to read from.
+							<br>
+							You can also review or recommend any books on the website.<br>
+							<br>
+							<i>Register Now</i> and be a part of this awesome network of book nerds!<br>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<a class="btn btn-primary" data-dismiss="modal">Close</a>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+	
 	
 		<!-- Start of StatCounter Code for Default Guide -->
 	<script type="text/javascript">
@@ -215,7 +255,11 @@ include_once "conn.inc.php";
 	<!-- End of StatCounter Code for Default Guide -->
 	
 	
+	
 	</body>
+	
+	
+	
 </html>
 
 <?php
