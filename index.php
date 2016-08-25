@@ -208,7 +208,7 @@ include_once "conn.inc.php";
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4>WCE BookShare</h4>
+						<h3>WCE BookShare</h3>
 					</div>
 					<div class="modal-body">
 						<p id="faq">
