@@ -2,10 +2,13 @@
 ob_start();
 session_start();
 
-$servername = "127.0.0.1";
-$username_db = "root";
-$password = "";
-$dbname = "bookshare";
+$servername = "mysql.hostinger.in";
+$username_db = "u419711236_root";
+$password = "hpotterhead";
+$dbname = "u419711236_wcebs";
+//I know what you're thinking :-|
+
+
 // Create connection
 $conn = new mysqli($servername, $username_db, $password, $dbname);
 // Check connection
