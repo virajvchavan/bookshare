@@ -45,14 +45,17 @@ if(isset($_POST['feedback']) && !empty($_POST['feedback']))
 			<div class="form-group">
     			<label class="control-label col-sm-2" for="name">Name:</label>
 					<div class="col-sm-10">
-						<input class='form-control' type="text" name="name" required placeholder="Enter Name"><br><br>
+						<input class='form-control' type="text" name="name" placeholder="Leave blank to be anonymous"><br>
+	
+						<br>
 					</div>
+					
 			</div>
 			
 			<div class="form-group">
     			<label class="control-label col-sm-2" for="name">Email:</label>
 					<div class="col-sm-10">
-						<input class='form-control' type="email" name="email" required placeholder="example@email.com"><br><br>
+						<input class='form-control' type="email" name="email" placeholder="Leave blank to be anonymous"><br><br>
 					</div>
 			</div>
 			
