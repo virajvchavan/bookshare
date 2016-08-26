@@ -76,14 +76,14 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 				if($liked_this)
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/book.php?id=$book_id&dislike=$book_id&like_id=$id_of_like' class='btn btn-default active'>Recommended ";
+							echo "<a href='book.php?id=$book_id&dislike=$book_id&like_id=$id_of_like' class='btn btn-default active'>Recommended ";
 						else
 							echo "<a href='#login' data-toggle='modal' class='btn btn-default active'>Recommended ";
 					}
 					else
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/book.php?id=$book_id&like=$book_id' class='btn btn-default'>Recommend ";
+							echo "<a href='book.php?id=$book_id&like=$book_id' class='btn btn-default'>Recommend ";
 						else
 							echo "<a href='#login' data-toggle='modal' class='btn btn-default'>Recommend ";
 					}

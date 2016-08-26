@@ -119,7 +119,7 @@ if(isset($_GET['delete_book']) && !empty($_GET['delete_book']))
 		if(mysqli_query($conn, $query_delete_book) && mysqli_query($conn, $query_delete_book1))
 		{
 			//echo "<script>alert('The book is deleted.');</script>";
-			header("refresh:0,url=http://localhost/bookshare/profile.php?id=$user_id_frm_book#books");
+			header("refresh:0,url=profile.php?id=$user_id_frm_book#books");
 		}
 		else
 			echo "Error deleting the book.";
@@ -152,7 +152,7 @@ if(isset($_GET['delete_review']) && !empty($_GET['delete_review']))
 		if(mysqli_query($conn, $query_delete_review))
 		{
 			//echo "<script>alert('The review is deleted.');</script>";
-			header("refresh:0,url=http://localhost/bookshare/profile.php?id=$user_id_frm_review#reviews");
+			header("refresh:0,url=profile.php?id=$user_id_frm_review#reviews");
 		}
 		else
 			echo "Error deleting the review.";
@@ -204,7 +204,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 				
 			}
 			if($logged_user)
-				echo "<a href='http://localhost/bookshare/profile.php?edit=$profile_id'class='btn btn-default'>Edit Profile</a>";
+				echo "<a href='profile.php?edit=$profile_id'class='btn btn-default'>Edit Profile</a>";
 			echo "</div>";
 			echo "</div>";			
 			
@@ -266,7 +266,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 						</script>
 
 
-						<form action="http://localhost/bookshare/profile.php?delete_book=<?php echo $book_id;?>" onsubmit="return deleteBook()" method="post">
+						<form action="profile.php?delete_book=<?php echo $book_id;?>" onsubmit="return deleteBook()" method="post">
 							<input type="submit" value="Delete" class="btn btn-danger pull-right">
 						</form>
 	<?php					
@@ -280,7 +280,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 
 				//	if($logged_user)
 				//	{
-				//		echo "<a class='btn btn-danger pull-right' href='http://localhost/bookshare/profile.php?delete_book=$book_id'>Delete</a>";
+				//		echo "<a class='btn btn-danger pull-right' href='profile.php?delete_book=$book_id'>Delete</a>";
 				//	}
 
 
@@ -352,7 +352,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 					</script>
 
 
-					<form action="http://localhost/bookshare/profile.php?delete_review=<?php echo $review_id;?>" onsubmit="return deleteReview()" method="post">
+					<form action="profile.php?delete_review=<?php echo $review_id;?>" onsubmit="return deleteReview()" method="post">
 						<input type="submit" value="Delete" class="btn btn-danger pull-right">
 					</form>
 <?php					
@@ -518,7 +518,7 @@ if(isset($_GET['edit']) && !empty($_GET['edit']))
 					<h4>All your data will be lost forever.</h4>
 				</div>
 				<div class="modal-footer">
-					<a href="http://localhost/bookshare/profile.php?delete=<?php echo $edit_id; ?>" class="btn btn-danger">Delete Account</a>
+					<a href="profile.php?delete=<?php echo $edit_id; ?>" class="btn btn-danger">Delete Account</a>
 					<a class="btn btn-success" data-dismiss="modal">Cancel</a>
 				</div>
 			</div>

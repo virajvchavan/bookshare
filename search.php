@@ -121,14 +121,14 @@ if(isset($_GET['term']))
 					if($liked_this)
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/search.php?term=$term&dislike=$book_id&like_id=$id_of_like' class='btn btn-info btn-sm active'>Reccomended ";
+							echo "<a href='search.php?term=$term&dislike=$book_id&like_id=$id_of_like' class='btn btn-info btn-sm active'>Reccomended ";
 						else
 							echo "<a href='#login' data-toggle='modal' class='btn btn-info btn-sm active'>Recommended ";
 					}
 					else
 					{
 						if(isLoggedIn())
-							echo "<a href='http://localhost/bookshare/search.php?term=$term&like=$book_id'' class='btn btn-info btn-sm'>Reccomend ";
+							echo "<a href='search.php?term=$term&like=$book_id'' class='btn btn-info btn-sm'>Reccomend ";
 						else
 							echo "<a href='#login' data-toggle='modal' class='btn btn-info btn-sm'>Recommend ";
 					}
