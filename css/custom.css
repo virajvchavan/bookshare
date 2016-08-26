@@ -87,6 +87,12 @@ body{
 		margin-right:20px;
 		
 	}
+	
+#small_reg{
+		margin-left:10px;
+		margin-right:20px;
+		
+	}
 }
 @media(min-width: 828px){
 
@@ -100,6 +106,12 @@ body{
 		margin-left:120px;
 		margin-right:200px;
 		
+	}
+	
+	#small_reg{
+		margin-left:50px;
+		margin-right:130px;
+	
 	}
 }
 

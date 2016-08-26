@@ -57,12 +57,13 @@ function validateForm()
 <div class="modal fade" id="register" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
+			
 				<form name="register" action="index.php" onsubmit="return validateForm()" method="post" class="form-horizontal" role="form">
 				<div class="modal-header text-center">
 					<h3>Register</h3>
 				</div>
 				<div class="modal-body">
-					
+					<div id="small_reg">
 						<div class="form-group">
 							<label for="fname_reg" class="col-xs-3 control-label">First Name</label>
 							<div class="col-xs-9" >
@@ -136,7 +137,9 @@ function validateForm()
 					
 						<a class="btn btn-warning" data-dismiss="modal">Close</a>
 				</div>
+				</div>
 					</form>
+			
 			</div>
 		</div>
 </div>
