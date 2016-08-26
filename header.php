@@ -65,7 +65,7 @@ include_once "conn.inc.php";
 
 										</form>
 							</li>
-							<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/index.php") echo "class='active'"; ?>><a href="index.php">Home</a></li>
+							
 							<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/register.php") echo "class='active'"; ?>><a href="#register" data-toggle="modal">Register</a></li>
 								<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/about.php") echo "class='active'"; ?>><a href="about.php">Feedback</a></li>
 						</ul>
