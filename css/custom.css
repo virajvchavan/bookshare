@@ -29,6 +29,7 @@ body{
 #panel-heading{
 	background: #37474f;
 	color: #cecccc;
+	min-height:100px;
 }
 .panel-heading:hover {
   background-color: #263238 !important;
