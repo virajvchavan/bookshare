@@ -54,7 +54,7 @@ if(!$book_added)
 	<div id="small_form">
 		<form action="newbook.php" method="post" role="form">
 			<div class="form-group">
-    			<label class="control-label col-sm-2" for="name">Name:</label>
+    			<label class="control-label col-sm-2" for="name">Book Name:</label>
 					<div class="col-sm-10">
 						<input class='form-control' type="text" name="name" required placeholder="Enter Name"><br><br>
 					</div>
