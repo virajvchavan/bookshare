@@ -79,7 +79,7 @@ include_once "conn.inc.php";
 
 
 									<ul class="nav navbar-nav navbar-right">
-										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/index.php") echo "class='active'"; ?>><a href="index.php">Home</a></li>
+										
 										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/newbook.php") echo "class='active'"; ?>><a href="newbook.php">Share a book</a></li>
 
 										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/profile.php") echo "class='active'"; ?>><a href = "profile.php?id=<?php echo $user_id; ?>">Profile</a></li>
