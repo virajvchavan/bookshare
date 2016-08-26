@@ -124,8 +124,6 @@ if(isset($_POST['email']) && isset($_POST['password']))
 			$array = mysqli_fetch_assoc($run);
 			$_SESSION['user_id'] = $array['id'];
 			$_SESSION['name'] = $array['first_name'];
-			echo "<div class='alert alert-success fade-in'>Login Successful</div>";
-			
 			$original_page = $_SERVER['HTTP_REFERER'];
 			header("refresh:0,$original_page");
 		}

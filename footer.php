@@ -57,7 +57,7 @@ function validateForm()
 <div class="modal fade" id="register" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
-				<form name="register" action="register.php" onsubmit="return validateForm()" method="post" class="form-horizontal" role="form">
+				<form name="register" action="index.php" onsubmit="return validateForm()" method="post" class="form-horizontal" role="form">
 				<div class="modal-header text-center">
 					<h3>Register</h3>
 				</div>
