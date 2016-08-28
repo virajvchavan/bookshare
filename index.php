@@ -178,7 +178,7 @@ include "conn.inc.php";
 					}
 					echo " <span class='badge'>$num_likes</span></button>";
 					echo "</span>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reviews  &nbsp;<span class='badge'>$num_reviews</span>";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='book.php?id=$book_id#jumbo-reviews'>Reviews  &nbsp;<span class='badge'>$num_reviews</span></a>";
 					
 					
 					echo "</div>";
@@ -305,7 +305,7 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	
 	?>
 	
-		<!-- Start of StatCounter Code for Default Guide -->
+		<!-- Start of StatCounter Code for Default Guide 
 	<script type="text/javascript">
 	var sc_project=11084230; 
 	var sc_invisible=0; 
@@ -324,7 +324,7 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	<!-- End of StatCounter Code for Default Guide -->
 	
 	
-	
+	-->
 	</body>
 	
 	

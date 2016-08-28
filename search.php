@@ -134,7 +134,7 @@ if(isset($_GET['term']))
 					}
 					echo "<div class='badge'> $num_likes</div></a>";
 					
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;Reviews  &nbsp;<div class='badge'>$num_reviews</div>";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;<a href='book.php?id=$book_id#jumbo-reviews'>Reviews  &nbsp;<div class='badge'>$num_reviews</div></a>";
 
 
 					echo "</div>";
