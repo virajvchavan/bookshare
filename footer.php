@@ -7,7 +7,7 @@
 			<p>Walchand College Of Engineering, Sangli</p>
 		</div>
 		<div class="navbar-text pull-right">
-			Developed by Viraj Chavan
+			Developed by Virajc
 			<br><br>
 			<a href="https://facebook.com/virajvchavan" target="_blank"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
 			&nbsp;
