@@ -243,8 +243,8 @@ include "conn.inc.php";
 if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['email_reg']) && isset($_POST['password_reg']) && isset($_POST['password1_reg']) && isset($_POST['branch_reg']) && isset($_POST['year_reg']) && isset($_POST['phone_reg']))
 {
 	$ok = true;
-	$first_name = filter_var($_POST['fname_reg'], FILTER_SANITIZE_STRING);
-	$last_name = filter_var($_POST['lname_reg'], FILTER_SANITIZE_STRING);
+	$first_name = ucwords(strtolower(filter_var($_POST['fname_reg'], FILTER_SANITIZE_STRING)));
+	$last_name = ucwords(strtolower(filter_var($_POST['lname_reg'], FILTER_SANITIZE_STRING)));
 	$email = filter_var($_POST['email_reg'], FILTER_SANITIZE_EMAIL);
 	$password = md5(filter_var(($_POST['password_reg']), FILTER_SANITIZE_STRING));
 	$password1 = md5(filter_var(($_POST['password1_reg']), FILTER_SANITIZE_STRING));
