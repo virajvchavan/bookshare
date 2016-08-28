@@ -220,6 +220,8 @@ include "conn.inc.php";
 							So you can contact that person to get the book.
 							And other people will contact you for the books that you've shared on this website.<br>
 							<br>
+							You share the books on your own responsibility.
+							<br><br>
 							The more books you will share, more people will get motivated to share their books, and you'll get more options to read from.
 							<br>
 							You can also review or recommend any books on the website.<br>
