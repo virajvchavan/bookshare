@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="navbar-text pull-left">
 			<p>BookShare</p>
-			<p>Walchand College Of Engineering, Sangli</p>
+			<p>Made for Walchand College Of Engineering, Sangli</p>
 		</div>
 		<div class="navbar-text pull-right">
 			Developed by Virajc
