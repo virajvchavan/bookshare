@@ -27,8 +27,8 @@ echo "<div class='container'>";
 if(isset($_POST['name']) && isset($_POST['author']) && isset($_POST['description']) && !empty($_POST['name']))
 {
 	
-	$name = $_POST['name'];
-	$author = $_POST['author'];
+	$name = ucwords(strtolower(filter_var($_POST['name'], FILTER_SANITIZE_STRING)));
+	$author =ucwords(strtolower(filter_var($_POST['author'], FILTER_SANITIZE_STRING)));
 	$description = $_POST['description'];
 	$description = nl2br(filter_var($description, FILTER_SANITIZE_STRING));
 	
@@ -56,7 +56,7 @@ if(!$book_added)
 			<div class="form-group">
     			<label class="control-label col-sm-2" for="name">Book Name:</label>
 					<div class="col-sm-10">
-						<input class='form-control' type="text" name="name" required placeholder="Enter Name"><br><br>
+						<input class='form-control' type="text" name="name" required placeholder="Enter Book Name"><br><br>
 					</div>
 			</div>
 			

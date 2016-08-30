@@ -326,7 +326,6 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	<!-- End of StatCounter Code for Default Guide -->
 	
 	
-	-->
 	</body>
 	
 	

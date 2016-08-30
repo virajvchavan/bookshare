@@ -66,8 +66,8 @@ include_once "conn.inc.php";
 										</form>
 							</li>
 							
-							<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/register.php") echo "class='active'"; ?>><a href="#register" data-toggle="modal">Register</a></li>
-								<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/about.php") echo "class='active'"; ?>><a href="about.php">Feedback</a></li>
+							<li><a href="#register" data-toggle="modal">Register</a></li>
+							
 						</ul>
 
 							<?php
@@ -80,10 +80,10 @@ include_once "conn.inc.php";
 
 									<ul class="nav navbar-nav navbar-right">
 										
-										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/newbook.php") echo "class='active'"; ?>><a href="newbook.php">Share a book</a></li>
+										<li <?php if(strpos($_SERVER['PHP_SELF'], "newbook.php")) echo "class='active'"; ?>><a href="newbook.php">Share a book</a></li>
 
-										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/profile.php") echo "class='active'"; ?>><a href = "profile.php?id=<?php echo $user_id; ?>">Profile</a></li>
-										<li <?php if($_SERVER['PHP_SELF'] == "/bookshare/about.php") echo "class='active'"; ?>><a href="about.php">Feedback</a></li>
+										<li <?php if(strpos($_SERVER['PHP_SELF'], "profile.php")) echo "class='active'"; ?>><a href = "profile.php?id=<?php echo $user_id; ?>">Profile</a></li>
+										<li <?php if(strpos($_SERVER['PHP_SELF'], "about.php")) echo "class='active'"; ?>><a href="about.php">Feedback</a></li>
 										<li><a href = "logout.php">Logout (<?php echo $user_name; ?>)</a></li>
 									</ul>
 							<?php
