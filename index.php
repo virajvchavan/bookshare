@@ -12,6 +12,10 @@ include "conn.inc.php";
 	<head>
 		<title>Bookshare</title>
 		
+		
+	</head>
+	<body>
+		
 		<script>
 		
 			function recommend(book_id, num_likes)
@@ -48,8 +52,6 @@ include "conn.inc.php";
 			}
 		
 		</script>
-	</head>
-	<body>
 		<?php
 		include "header.php";
 	
