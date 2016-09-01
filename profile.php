@@ -196,11 +196,12 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 				$year = $array['year'];
 				$branch = $array['branch'];
 				
+				echo "<h1><b>$fname $lname</b></h1><br><h4>$year $branch<br><br>";
 				
-				echo "
-				
-				<h1><b>$fname $lname</b></h1><br><h4>$year $branch<br><br><b>Phone:</b> $phone<br><b>Email:</b> $email<br><br></h4>";
-				
+				if(isLoggedIn())
+					echo "<b>Phone:</b> $phone<br><b>Email:</b> $email<br><br></h4>";
+				else
+					echo "<br><div class='alert alert-danger'>Login to contact $fname.</div>";
 				
 			}
 			if($logged_user)

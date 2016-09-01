@@ -41,7 +41,7 @@ include_once "conn.inc.php";
 						<ul class="nav navbar-nav">
 							<li>
 								<form class="navbar-form form-inline" action='search.php' method='get'>
-									<input type="text" class="form-control input-sm " name="term" placeholder="Search books/authors" >
+									<input type="text" required class="form-control input-sm " name="term" placeholder="Search books/authors" >
 									<input type="submit" value="Search" class="btn btn-primary input-sm form-control">
 								</form>
 
@@ -58,8 +58,8 @@ include_once "conn.inc.php";
 						<ul class="nav navbar-nav navbar-right">
 							<li>
 										<form class="navbar-form form-inline" action="<?php echo $original_page; ?>" method="post">
-										<input class="form-control input-sm" type="email" name="email" placeholder="Email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-										<input class="form-control input-sm" type="password" name="password" placeholder="Password">&nbsp;&nbsp;&nbsp;&nbsp;
+										<input class="form-control input-sm" required type="email" name="email" placeholder="Email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+										<input class="form-control input-sm" required type="password" name="password" placeholder="Password">&nbsp;&nbsp;&nbsp;&nbsp;
 										<input type="submit" value=" Login " class="btn btn-success input-sm">
 
 
