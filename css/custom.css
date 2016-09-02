@@ -25,11 +25,12 @@ body{
 	margin-bottom: 30px;
 	border-color: #2C3E50;
 }
-
+#book-body{
+	min-height:400px;
+}
 #panel-heading{
 	background: #37474f;
 	color: #cecccc;
-	min-height:100px;
 }
 .panel-heading:hover {
   background-color: #263238 !important;

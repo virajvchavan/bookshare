@@ -15,8 +15,8 @@ include "conn.inc.php";
 		
 	</head>
 	<body>
-		
-		<script>
+	
+	<script>
 		
 			function recommend(book_id, num_likes)
 			{
@@ -121,8 +121,12 @@ include "conn.inc.php";
 					}
 
 					echo "
-					<div class='panel-heading' id='panel-heading'><a href='book.php?id=$book_id'><h3><b>$book_name</b></h3></a></div>
-					<div class='panel-body'><h4>by <i>$author</i></h4><br>";
+					<div class='panel-heading' id='panel-heading'><a href='book.php?id=$book_id'><h3><b>";
+					echo substr($book_name, 0,42);
+					if(strlen($book_name) > 42)
+						echo "...";
+					echo "</b></h3></a></div>
+					<div class='panel-body' id='book_body'><h4>by <i>$author</i></h4><br>";
 					
 					if(isLoggedIn())
 						echo "<b>Owner</b>: <a href='profile.php?id=$owner_id'>$owner_name $owner_surname, $owner_year  $owner_branch<br></a><br>";
@@ -309,8 +313,8 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	
 	?>
 	
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
+		<!-- Start of StatCounter Code for Default Guide 
+	<script type="text/javascript">
 	var sc_project=11084230; 
 	var sc_invisible=0; 
 	var sc_security="651230c1"; 
@@ -319,15 +323,13 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	document.write("<sc"+"ript type='text/javascript' src='" +
 	scJsHost+
 	"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript>
-	<div class="statcounter"><a title="free web stats"
-	href="http://statcounter.com/" target="_blank"><img
-	class="statcounter"
-	src="//c.statcounter.com/11084230/0/651230c1/0/" alt="free
-	web stats"></a></div>
-</noscript>
-<!-- End of StatCounter Code for Default Guide -->
+	</script>
+	<noscript><div class="statcounter"><a title="website
+	statistics" href="http://statcounter.com/free-web-stats/"
+	target="_blank"><img class="statcounter"
+	src="//c.statcounter.com/11084230/0/651230c1/0/"
+	alt="website statistics"></a></div></noscript>
+	<!-- End of StatCounter Code for Default Guide -->
 	
 	
 	</body>
