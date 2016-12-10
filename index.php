@@ -313,7 +313,7 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	
 	?>
 	
-
+		<!-- Start of StatCounter Code for Default Guide 
 	<script type="text/javascript">
 	var sc_project=11084230; 
 	var sc_invisible=0; 
@@ -324,9 +324,11 @@ if(isset($_POST['fname_reg']) && isset($_POST['lname_reg']) && isset($_POST['ema
 	scJsHost+
 	"statcounter.com/counter/counter.js'></"+"script>");
 	</script>
-	<noscript><div class="statcounter"><img class="statcounter"
+	<noscript><div class="statcounter"><a title="website
+	statistics" href="http://statcounter.com/free-web-stats/"
+	target="_blank"><img class="statcounter"
 	src="//c.statcounter.com/11084230/0/651230c1/0/"
-	alt="website statistics"></div></noscript>
+	alt="website statistics"></a></div></noscript>
 	<!-- End of StatCounter Code for Default Guide -->
 	
 	
