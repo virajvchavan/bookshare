@@ -1,5 +1,5 @@
 # bookshare
-A web platform for sharing books built with php, mysql
+A web platform for sharing books built with php, mysql, javascript, css, html.
 
 Ever wanted to read some book, but never bought it? Or miss your old library where you used to borrow books from?
 
@@ -11,4 +11,5 @@ You share the books on your own responsibility.
 
 The more books you will share, more people will get motivated to share their books, and you'll get more options to read from. 
 You can also review or recommend any books on the website.
+
 
