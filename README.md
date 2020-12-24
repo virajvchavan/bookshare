@@ -1,6 +1,8 @@
 # bookshare
 A web platform for sharing books built with php, mysql, javascript, css, html.
 
+PS: Old code. Not maintained. Lost the db sql backup.
+
 Ever wanted to read some book, but never bought it? Or miss your old library where you used to borrow books from?
 
 BookShare is here to help you out.
